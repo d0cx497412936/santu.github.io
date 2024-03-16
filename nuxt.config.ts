@@ -1,6 +1,9 @@
 import ElementPlus from 'unplugin-element-plus/vite'
 export default defineNuxtConfig({
   css: ['element-plus/dist/index.css', '@/assets/style/index.scss'],
+  modules: [
+    '@element-plus/nuxt'
+  ],
   build: {
     transpile: [
       'element-plus/dist',
@@ -9,12 +12,6 @@ export default defineNuxtConfig({
     ],
   },
   vite: {
-    vue: {
-      customElement: true
-    },
-    vueJsx: {
-      mergeProps: true
-    },
     css: {
       preprocessorOptions: {
         scss: {
