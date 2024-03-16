@@ -5,15 +5,25 @@ export default defineNuxtConfig({
     transpile: [
       'element-plus/dist',
       'element-plus/es',
+      '@element-plus/icons-vue',
     ],
   },
   vite: {
+    vue: {
+      customElement: true
+    },
+    vueJsx: {
+      mergeProps: true
+    },
     css: {
       preprocessorOptions: {
         scss: {
           additionalData: '@import "assets/style/variable.scss";',
         }
       }
-    }
+    },
+    plugins: [
+      ElementPlus()
+    ],
   }
 })
