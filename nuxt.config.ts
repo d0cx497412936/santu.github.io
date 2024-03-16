@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     transpile: [
       'element-plus/dist',
       'element-plus/es',
-      '@element-plus/icons-vue',
     ],
   },
   vite: {
@@ -15,9 +14,6 @@ export default defineNuxtConfig({
           additionalData: '@import "assets/style/variable.scss";',
         }
       }
-    },
-    plugins: [
-      ElementPlus()
-    ],
+    }
   }
 })
