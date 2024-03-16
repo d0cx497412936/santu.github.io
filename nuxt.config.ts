@@ -22,5 +22,11 @@ export default defineNuxtConfig({
     plugins: [
       ElementPlus()
     ],
+  },
+  router: {
+    base:'/vue-demo'
+  },
+  generate: {
+    subFolders: false,
   }
 })
