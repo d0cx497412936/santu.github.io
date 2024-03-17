@@ -1,8 +1,8 @@
 <template>
     <div class="panel-list">
-        <NuxtLink to="/scrolledDemo" class="panel-list-menu">滚动条组件封装(pc&mobile)</NuxtLink>
         <div class="panel-list-menu" @click="goPage('/grid')">grid布局(pc&mobile)</div>
-        <div class="panel-list-menu" @click="goPage('/design')">移动端可视化表单配置示范</div>
+        <NuxtLink to="/scrolledDemo" class="panel-list-menu">滚动条组件封装(pc&mobile)</NuxtLink>
+        <div class="panel-list-menu" @click="goPage('/design')">PC可视化表单配置示范</div>
     </div>
 </template>
 <script setup lang="ts">

@@ -161,9 +161,12 @@ defineExpose(
     position: relative;
     padding: 5px 0;
     color: $color-black;
-
+    box-sizing: border-box;
+    padding-right: 300px;
     .design-content-panel {
-        width: 100%;
+        // width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
         position: relative;
         box-sizing: border-box;
         padding-bottom: 300px;
@@ -178,8 +181,11 @@ defineExpose(
     .design-dialog-panel {
         position: fixed;
         bottom: 0;
-        width: 100%;
-        left: 0;
+        // width: 100%;
+        // left: 0;
+        right: 0;
+        top: 0;
+        width: 300px;
         z-index: 9;
         background-color: white;
         border-radius: 4px;
