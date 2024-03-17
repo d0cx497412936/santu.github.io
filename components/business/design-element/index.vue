@@ -98,8 +98,10 @@ const handleBoardClone = (item: any) => {
     handleSelected(contentList.value[item.newIndex], item.newIndex + 1)
 }
 const addItem = (data: any) => {
+    contentList.value.push(data)
     nextTick(() => {
         handleSelected(contentList.value[contentList.value.length - 1], contentList.value.length)
+
         const lastItem = document.querySelectorAll('.design-content-item')[contentList.value.length - 1] as HTMLElement
         const top = lastItem?.offsetTop || 0
         if (top > 10) {
