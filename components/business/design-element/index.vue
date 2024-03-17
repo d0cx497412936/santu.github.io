@@ -1,10 +1,10 @@
 <template>
     <div class="design-view" @click="closeSelect">
         <div class="design-content-panel" @click.stop="">
-            <p style="text-align: center;">可视化组件配置</p>
             <div class="draggable-panel" :style="{ 'minHeight': contentList.length <= 0 ? '350px' : 0 }">
                 <draggable v-model="contentList" :group="draggableOptions" transition-group="500" animation="100"
-                    :sort="true" @start="onStart" @end="onEnd" @add="handleBoardClone" style="min-height: 300px;padding-bottom: 50px;">
+                    :sort="true" @start="onStart" @end="onEnd" @add="handleBoardClone"
+                    style="min-height: 300px;padding-bottom: 50px;">
                     <template #item="{ element, index }">
                         <div class="design-content-item" :class="{ 'no-border': selectedId === element.id }"
                             :key="element.id" @click="handleSelected(element, index + 1)">
@@ -16,6 +16,10 @@
                         </div>
                     </template>
                 </draggable>
+                <div class="drag-tips" v-if="contentList.length <= 0">
+                   
+                    <p>可通过点击下方组件或拖拽至此区域添加</p>
+                </div>
             </div>
         </div>
         <div class="design-dialog-panel" @click.stop="">
@@ -227,6 +231,19 @@ defineExpose(
 
     .no-border {
         border: 0
+    }
+    .drag-tips{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        border: 1px dashed #dcdcdc;
+        text-align: center;
+        min-height: 300px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
     }
 }
 </style>
