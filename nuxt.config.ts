@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   ],
   build: {
     transpile: [
+      '/echarts/',
       'element-plus/dist',
       'element-plus/es',
       '@element-plus/icons-vue',
