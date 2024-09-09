@@ -49,7 +49,7 @@ export default function useMusicTool(Tone) {
                 A7: "A7.mp3",
                 C8: "C8.mp3",
             }, {
-            baseUrl: '/samples/piano/',
+            baseUrl:(import.meta.env.MODE==='development'? '':'/vue-demo') +'/samples/piano/',
             onload: null
         }).toDestination();
         const id = uuidv4()
