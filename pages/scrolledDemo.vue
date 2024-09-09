@@ -1,6 +1,6 @@
 <template>
     <div class="scroll-page">
-        <BaseScrollbar>
+        <!-- <BaseScrollbar>
             <div class="scrollerDemo">
                 <img src="../public/image/1.jpg">
                 <img src="../public/image/2.jpg">
@@ -10,7 +10,6 @@
             </div>
         </BaseScrollbar>
         <div class="verticalDemo">
-
             <BaseScrollbar direction="vertical">
                 <img src="../public/image/1.jpg">
                 <img src="../public/image/2.jpg">
@@ -18,8 +17,14 @@
                 <img src="../public/image/4.jpg">
                 <img src="../public/image/5.jpg">
             </BaseScrollbar>
+        </div> -->
+        <div class="scrollerDemo">
+                <img src="../public/image/1.jpg">
+                <img src="../public/image/2.jpg">
+                <img src="../public/image/3.jpg">
+                <img src="../public/image/4.jpg">
+                <img src="../public/image/5.jpg">
         </div>
-
     </div>
 </template>
 <script lang="ts" setup>
